@@ -1,35 +1,40 @@
-## 知程的微信小程序
+# 知程的微信小程序
 
 下面是界面截图
 
-###首页
+<div align="center">
 
-![首页](./picture/home.png)
 
-###提问
+##首页
 
-![提问](./picture/tiwen.png)
+<img width="200" src="./picture/home.png" />
 
-###消息
+##提问
 
-![消息](./picture/da.png)
+<img width="200" src="./picture/tiwen.png" />
 
-###me
+##消息
 
-![me](./picture/me.png)
+<img width="200" src="./picture/da.png" />
 
-###登录
+##me
 
-![登录](./picture/login.png)
+<img width="200" src="./picture/me.png" />
 
-###其他用户
+##登录
 
-![其他用户](./picture/ouser.png)
+<img width="200" src="./picture/login.png" />
 
-###搜索
+##其他用户
 
-![搜索](./picture/sou2.png)
+<img width="200" src="./picture/ouser.png" />
 
-###城市级联
+##搜索
 
-![城市级联](./picture/sou.png)
+<img width="200" src="./picture/sou2.png" />
+
+##城市级联
+
+<img width="200" src="./picture/sou.png" />
+
+</div>
