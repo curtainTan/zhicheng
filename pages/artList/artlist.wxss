@@ -1,0 +1,89 @@
+/* pages/artList/artlist.wxss */
+
+.hot-com{
+  margin: 8px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 2px rgb(219, 219, 219);
+  font-size: 14px;
+  padding: 8px 10px;
+}
+.hot-com .hot-com-bottom{
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0px;
+}
+.hot-com-bottom-left .left-user{
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: rgb(179, 179, 179);
+}
+.hot-com-bottom-left .left-user image{
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+.hot-com-bottom-left .left-user .icon{
+  display: flex;
+  align-items: center;
+  margin: 0px 8px;
+}
+.hot-com-bottom-left .left-user .icon image{
+  height: 16px;
+  width: 16px;
+  margin: 0px 4px;
+}
+.hot-com-bottom-r image{
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+}
+.title{
+  margin-top: 8px;
+  color: #999;
+  font-size: 11px;
+}
+
+/* 历史记录 */
+.history .h-one{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 1px rgb(197, 197, 197);
+  font-size: 14px;
+}
+.history .h-one .h-about{
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  color: rgb(175, 175, 175);
+  font-size: 12px;
+}
+.history .h-one .h-about .headimg{
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  margin-right: 4px;
+}
+.history .h-one .h-about .icon{
+  display: flex;
+  align-items: center;
+}
+.history .h-one .h-about .icon image{
+  height: 16px;
+  width: 16px;
+  margin: 0px 4px;
+}
+.h-right{
+  font-size: 10px;
+  color: rgb(180, 180, 180);
+}
+.h-right image{
+  width: 80px;
+  height: 60px;
+  border-radius: 4px;
+}

@@ -1,0 +1,30 @@
+<!--pages/template/art_list.wxml-->
+<template name="art">
+  <view class='art-box'>
+    <view class='top'>
+      <image src='http://www.curtaintan.club/headImg/1543287803750.png' />
+      <text>用户名</text>
+    </view>
+    <view class='mid'>
+      <view class='left'>
+        <view class='title' >这里是文章标题</view>
+        <view>
+          <text>{{content}}</text>
+        </view>
+      <view class='bottom'>
+        <view class='comment'>
+          <image src='/image/some/msg.png' />
+          <text>34</text>
+        </view>
+        <view class='like'>
+          <image src='/image/some/like.png' />
+          <text>56</text>
+        </view>
+      </view>
+      </view>
+      <view class='right' wx:if="{{true}}" >
+        <image src='http://curtaintan.club/headImg/1546769437877.jpg' />
+      </view>
+    </view>
+  </view>
+</template>

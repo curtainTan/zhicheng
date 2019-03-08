@@ -1,0 +1,60 @@
+
+<view class="section" >
+  <view class='search-box'>
+    <view class='search-inbox'>
+      <text>知程</text>
+      <icon type="search" size="12" color="#333" />
+      <input placeholder="搜索" class='search-input'
+        bindtap="toSearch"
+        disabled='{{true}}'
+      />
+    </view>
+  </view> 
+  <swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{circular}}"
+  >
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}" >
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <view 
+    wx:for="{{articleList}}"
+    wx:key="{{index}}"
+  >
+    <view class='art-box {{ animatelist[index] }}'>
+      <view class='top' bindtap='touser' data-userid="{{index}}" >
+        <image data-userid="{{index}}" src='{{item.user.image}}'/>
+        <text data-userid="{{index}}" >{{item.user.name || "小程...." }}</text>
+      </view>
+      <view class='mid'>
+        <view class='left'>
+          <view class='title' data-index="{{item.id}}" catchtap="toArticle" >{{item.title}}</view>
+          <view>
+            <text class='content'>{{item.brief}}</text>
+          </view>
+        <view class='bottom'>
+          <view class='comment'>
+            <image src='/image/some/m2.png' />
+            <text>34</text>
+          </view>
+          <view class='like'>
+            <image src='/image/some/like2.png' />
+            <text>56</text>
+          </view>
+        </view>
+        </view>
+        <view class='right' wx:if="{{true}}" >
+          <image src='{{ someimg[index] || "http://119.23.54.128:8000/media/users/2019/03/headImg_xU7Kfjo.png"}}' />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='addmore'>{{tishi[tishiIndex]}}</view>

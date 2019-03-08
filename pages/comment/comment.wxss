@@ -1,0 +1,131 @@
+/* pages/comment/comment.wxss */
+.msg-top{
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 4px 2px rgb(219, 219, 219);
+  position: sticky;
+  margin: 8px 0px;
+  top: 0px;
+  background-color: #fff;
+}
+.msg-top .asd{
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  padding: 6px 40px 7px 40px;
+}
+.msg-top .asd text{
+  padding-bottom: 6px;
+}
+.msg-top .topselect{
+  color: rgb(255, 76, 22);
+}
+.msg-top .topselect text{
+  border-bottom: 2px solid rgb(255, 76, 22);
+}
+
+/* 二级菜单 */
+
+.com-subTitle{
+  font-size: 12px;
+  margin: 6px 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 2px rgb(219, 219, 219);
+  display: flex;
+  justify-content: space-between;
+}
+.com-subTitle view{
+  flex: 1;
+  text-align: center;
+  color: rgb(160, 160, 160);
+}
+.com-subTitle .subIndex{
+  color: rgb(255, 76, 22);
+}
+
+/* 热门 */
+.hot-com{
+  margin: 8px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 2px rgb(219, 219, 219);
+  font-size: 14px;
+  padding: 8px 10px;
+}
+.hot-com .hot-com-bottom{
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0px;
+}
+.hot-com-bottom-left .left-user{
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: rgb(179, 179, 179);
+}
+.hot-com-bottom-left .left-user image{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+.hot-com-bottom-left .left-user .icon{
+  display: flex;
+  align-items: center;
+  margin: 0px 8px;
+}
+.hot-com-bottom-left .left-user .icon image{
+  height: 16px;
+  width: 16px;
+  margin: 0px 4px;
+}
+.hot-com-bottom-r image{
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+
+/* 我的 */
+.my-com{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 2px rgb(219, 219, 219);
+  font-size: 14px;
+  padding: 8px 10px;
+}
+.my-com .my-hot-about{
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: rgb(187, 187, 187);
+}
+.title{
+  margin: 8px 0px;
+  color: #999;
+  font-size: 11px;
+}
+.my-com .my-com-r image{
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.my-com .my-hot-about .icon{
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.my-com .my-hot-about .icon image{
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+.my-com .my-hot-about .icon text{
+  margin-right: 4px;
+}
+
+

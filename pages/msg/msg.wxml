@@ -1,0 +1,32 @@
+<!--pages/msg/msg.wxml-->
+<view class='msg-top' bindtap='news'>
+  <view data-num='0' class='{{selectIndex == 0 ? "topselect" : ""}}' >最新</view>
+  <view data-num='1' class='{{selectIndex == 1 ? "topselect" : ""}}'>@我</view>
+  <view data-num='2' class='{{selectIndex == 2 ? "topselect" : ""}}'>回复</view>
+  <view data-num='3' class='{{selectIndex == 3 ? "topselect" : ""}}'>时间排序</view>
+</view>
+<view class='msg-content'>
+  <view class='one-msg' wx:for="{{items}}" wx:key="{{index}}" >
+    <view class='one-msg-left'>
+      <view class='msg-title'>{{ item.title }}</view>
+      <view class='msg-user'>
+        <image src='{{ item.user.image || "http://www.curtaintan.club/headImg/1543287803750.png"}}' />
+        <view>
+          <text>{{item.user.name}}</text>
+          <text class='msg-user-time'>2018-02-23 15:20</text>
+        </view>
+      </view>
+      <view class='msg-about'>
+        <view class='text'>@{{item.user.name}}:{{ item.brief }}</view>
+        <view class='msg-about-r'>
+          <image src='/image/some/m2.png' /><text>56</text>
+          <image src='/image/some/like2.png' /><text>23</text>
+        </view>
+      </view>
+    </view>
+    <view class='one-msg-r'>
+      <image src='{{ someimg[index] }}'></image>
+    </view>
+  </view>
+</view>
+<view class='msg-bouttom'>到底啦</view>

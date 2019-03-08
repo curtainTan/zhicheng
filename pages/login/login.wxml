@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <view class='form'>
+    <view class='user'>
+      <image src='/image/some/user.png' />
+      <input
+        placeholder='请输入手机号'
+        focus="{{true}}"
+        bindinput='bindUser'
+      />
+    </view>
+    <view class='psw'>
+      <image src='/image/some/lock.png' />
+      <input 
+        password='{{true}}' 
+        placeholder='请输入密码' 
+        bindinput='bindPsw'
+      />
+    </view>
+  </view>
+  <button class='btn' 
+    bindtap='login'
+    disabled='{{btnDis}}'
+    loading='{{btnLoading}}'
+  >登录</button>
+  <view class='forget'>
+    <text>忘记密码</text>
+  </view>
+</view>

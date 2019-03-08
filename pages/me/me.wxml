@@ -1,0 +1,42 @@
+<!--pages/me/me.wxml-->
+
+<view class='me' wx:if="{{ !loged }}">
+  <view class='me-box'>
+    <view class='logo'>
+      <image src='/image/some/log.jpg' />
+    </view>
+    <view class='form-box'>
+      <button type='primary' >微信一键登录</button>
+      <button bindtap="toLogin">已有知程账号登录</button>
+    </view>
+  </view>
+</view>
+
+
+<view wx:else>
+  <view class='me-top'>
+    <image src='{{ zhiuser.image || "http://www.curtaintan.club/headImg/1543287803750.png"}}' />
+    <view class='me-top-r'>
+      <text>{{zhiuser.name}}</text>
+      <view class='useremail'>邮箱：{{zhiuser.email}}</view>
+      <view class='usersign'>签名：{{zhiuser.sign}}</view>
+    </view>
+  </view>
+
+  <view class='me-mid' bindtap='toArtList' >
+    <view class='me-one' 
+      wx:for="{{bottomText}}" 
+      wx:key="{{index}}"
+      data-label='{{index}}'
+      style='{{rippleStyle}}'
+    >
+      <view data-label='{{index}}'>
+        <image src='{{item.img}}' data-label='{{index}}' />
+        <text data-label='{{index}}'>{{item.text}}</text>
+      </view>
+      <image data-label='{{index}}' src='/image/some/right.png' />
+    </view>
+  </view>
+  <view class='switch' bindtap='toLogin' >切换用户</view>
+  <button bindtap='logout' class='logout' >退出登录</button>
+</view>

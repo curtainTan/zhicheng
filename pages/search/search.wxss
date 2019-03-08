@@ -1,0 +1,133 @@
+/* pages/search/search.wxss */
+
+@import '/pages/template/art_list.wxss';
+
+.search{
+  font-size: 14px;
+}
+.search .top1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0px;
+  border-bottom: 1px solid rgb(184, 180, 184);
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+}
+.search .top1 .left{
+  display: flex;
+  align-items: center;
+  background-color: rgba(224, 224, 224, .5);
+  border-radius: 15px;
+  height: 28px;
+  padding-left: 14px;
+  width: 70%;
+}
+.search .top1 .left text{
+  color: rgb(182, 182, 182);
+  font-size: 11px;
+}
+.search .top1 .right{
+  display: flex;
+  align-items: center;
+}
+.search .top1 .right button{
+  background-color: rgb(255, 107, 21);
+  color: #fff;
+}
+.search .top1 .left image{
+  width: 20px;
+  height: 20px;
+  padding-right: 8px;
+  border-right: 1px solid #999;
+  margin-right: 8px;
+}
+
+.citypicker{
+  position: absolute;
+  bottom: 0px;
+  height: 314px;
+  width: 100%;
+  font-size: 16px;
+  background-color:#fff;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, .2);
+}
+.cityheader{
+  display: flex;
+  justify-content: space-between;
+}
+.cityheader view{
+  margin: 6px 30px;
+  background-color: rgb(189, 189, 189);
+  padding: 6px 0px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+.cityheader .hovera{
+  background-color: #555;
+  color: #fff;
+}
+.one{
+  width: 40%;
+  text-align: center;
+}
+
+.hot-search{
+  padding: 14px;
+  font-size: 13px;
+}
+.hot-search .hot-top{
+  display: flex;
+  justify-content: space-between;
+}
+.hot-search .hot-top .huan{
+  color: rgb(255, 75, 20);
+}
+.hot-search .box view{
+  float: left;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgb(212, 212, 212);
+  margin: 8px 0px;
+  margin-right: 10px;
+  color: rgb(59, 59, 59);
+}
+.history{
+  clear: left;
+  padding: 14px;
+  font-size: 13px;
+}
+.history .history-top{
+  display: flex;
+  justify-content: space-between;
+}
+.history .history-top image{
+  width: 20px;
+  height: 20px;
+}
+.history .box view{
+  float: left;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgb(212, 212, 212);
+  margin: 8px 0px;
+  margin-right: 10px;
+  color: rgb(59, 59, 59);
+}
+.art_list{
+  clear: both;
+}
+.hover-btn{
+  background-color: #999;
+}
+.addmore{
+  text-align: center;
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+

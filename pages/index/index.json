@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "知程",
+  "backgroundColor": "#fff",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true
+}

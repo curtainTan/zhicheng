@@ -1,0 +1,67 @@
+<!--pages/comment/comment.wxml-->
+<view class='msg-top' bindtap='news'>
+  <view data-num='0' class='asd {{selectIndex == 0 ? "topselect" : ""}}'>
+    <text data-num='0'>热门</text>
+  </view>
+  <view data-num='1' class='asd {{selectIndex == 1 ? "topselect" : ""}}'>
+    <text data-num='1'>我的提问</text>
+  </view>
+</view>
+<view class='com-subTitle' bindtap='subSelect'>
+  <view 
+    wx:for="{{subTitle[selectIndex]}}" 
+    wx:key="{{index}}"
+    data-subselectindex='{{index}}'
+    class='{{subIndex == index ? "subIndex" : ""}}'
+  >{{item}}</view>
+</view>
+
+<view class='hot-com'
+  wx:if="{{selectIndex == 0}}" 
+  wx:for="{{resList}}" 
+  wx:key="{{index}}" >
+  <view>{{ item.title }}</view>
+  <view class='hot-com-bottom'>
+    <view class='hot-com-bottom-left'>
+      <view class='left-user'>
+        <image src='{{ item.user.image || "http://www.curtaintan.club/headImg/1543287803750.png"}}' />
+        <text>{{ item.user.name }}</text>
+        <view class='icon'>
+          <image src='/image/some/m2.png' /><text>56</text>
+          <image src='/image/some/like2.png' /><text>23</text>
+        </view>
+      </view>
+      <view class='title'>
+        {{item.brief}}
+      </view>
+    </view>
+    <view class='hot-com-bottom-r' wx:if="{{item.img}}">
+      <image src='{{item.img}}' />
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{selectIndex == 1}}" >
+  <view class='my-com'
+    wx:for="{{resList}}"
+    wx:key="{{index}}" >
+    <view class='my-com-left'>
+      <view>
+        {{ item.title }}
+      </view>
+      <view class='title'>
+        {{item.brief}}
+      </view>
+      <view class='my-hot-about'>
+        <view class='icon'>
+          <image src='/image/some/m2.png' /><text>56</text>
+          <image src='/image/some/like2.png' /><text>23</text>
+        </view>
+        <text>2018-9-23 17:24</text>
+      </view>
+    </view>
+    <view class='my-com-r' wx:if="{{item.img}}" >
+      <image src='{{item.img}}' />
+    </view>
+  </view>
+</view>

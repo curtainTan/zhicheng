@@ -1,0 +1,91 @@
+<!--pages/otherUser/otheruser.wxml-->
+<view class='user-top'>
+  <view class='bg'></view>
+  <view class='user-top-bottom'>
+    <view class='user'>
+      <image src='http://119.23.54.128:8000/media/users/2019/03/headImg_GZoYOcP.png'/>
+      <view class='user-r'>
+        <text>333</text>
+        <view class='user-about'>
+          <text>23 关注</text>
+          <text>12 粉丝</text>
+          <text># 标签: 汽车，医疗</text>
+        </view>
+      </view>
+    </view>
+    <view class='introduce'>
+      <text>自我介绍:踏破铁鞋无觅处，德莱全不费工夫....</text>
+    </view>
+    <view class='other'>
+      写了23篇文章，获得了34个喜欢，获得45次收藏
+    </view>
+  </view>
+</view>
+
+<!-- 下半部分 -->
+<view class='user-bottom'>
+
+  <view class='hot-com'
+    wx:for="{{topitems}}" 
+    wx:key="{{index}}">
+    <view class='totop'>
+      <image class='totop-img' src='/image/some/top.png' />
+      <text>置顶</text>
+    </view>
+    <view>积分入学中社保积分怎么算？</view>
+    <view class='hot-com-bottom'>
+      <view class='hot-com-bottom-left'>
+        <view class='left-user'>
+          <image src='http://www.curtaintan.club/headImg/1543287803750.png' />
+          <text>333</text>
+          <view class='icon'>
+            <image src='/image/some/m2.png' /><text>56</text>
+            <image src='/image/some/like2.png' /><text>23</text>
+          </view>
+        </view>
+        <view class='title'>
+          见不得别人苦的我，在心里早就退让了一大步。房租没着落，还不忘安抚小伙的心，并当面作出许允：买热水器和安装的费用我作为房东会一分不少的返回给他
+        </view>
+      </view>
+      <view class='hot-com-bottom-r' wx:if="{{item.img}}">
+        <image src='{{item.img}}' />
+      </view>
+    </view>
+  </view>
+
+  <view class='label' bindtap='onselect'>
+    <view data-label='0' class='{{selectindex == 0 ? "topselect" : ""}}'>最新发布</view>
+    <view data-label='1' class='{{selectindex == 1 ? "topselect" : ""}}'>最新评论</view>
+    <view data-label='2' class='{{selectindex == 2 ? "topselect" : ""}}'>热门讨论</view>
+  </view>
+
+  <view class='hot-com'
+    wx:for="{{resList}}" 
+    wx:key="{{index}}" >
+    <view>{{ item.title }}</view>
+    <view class='hot-com-bottom'>
+      <view class='hot-com-bottom-left'>
+        <view class='left-user'>
+          <image src='{{ item.user.image || "http://www.curtaintan.club/headImg/1543287803750.png"}}' />
+          <text>{{ item.user.name }}</text>
+          <view class='icon'>
+            <image src='/image/some/m2.png' /><text>56</text>
+            <image src='/image/some/like2.png' /><text>23</text>
+          </view>
+        </view>
+        <view class='title'>
+          {{ item.brief }}
+        </view>
+      </view>
+      <view class='hot-com-bottom-r'>
+        <image src='{{someimg[index]}}' />
+      </view>
+    </view>
+  </view>
+
+
+</view>
+
+
+
+

@@ -1,0 +1,51 @@
+
+<!-- 个人中心的三个展示 -->
+
+<view class='like-list' wx:if="{{ selectLabel > 0 }}" >
+  <view class='hot-com'
+    wx:for="{{resList}}" 
+    wx:key="{{index}}" >
+    <view>{{ item.title }}</view>
+    <view class='hot-com-bottom'>
+      <view class='hot-com-bottom-left'>
+        <view class='left-user'>
+          <image src='{{ item.user.image || "http://www.curtaintan.club/headImg/1543287803750.png"}}' />
+          <text>{{item.user.name}}</text>
+          <view class='icon'>
+            <image src='/image/some/m2.png' /><text>{{ item.p }}</text>
+            <image src='/image/some/like2.png' /><text>{{ item.like }}</text>
+          </view>
+        </view>
+        <view class='title'>
+          {{ item.brif }}
+        </view>
+      </view>
+      <view class='hot-com-bottom-r' wx:if="{{item.img}}">
+        <image src='{{item.img}}' />
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='history' wx:else >
+  <view class='h-one'
+    wx:for="{{resList}}" 
+    wx:key="{{index}}">
+    <view class='h-left'>
+      <text>{{ item.title }}</text>
+      <view class='h-about'>
+        <image class='headimg' src='{{ item.user.image || "http://www.curtaintan.club/headImg/1543287803750.png"}}' />
+        <text>{{ item.user.name }}</text>
+        <view class='icon'>
+          <image src='/image/some/m2.png' /><text>{{ item.p }}</text>
+          <image src='/image/some/like2.png' /><text>{{ item.like }}</text>
+        </view>
+      </view>
+    </view>
+    <view class='h-right'>
+      <view>2018.3.23 16:00</view>
+      <image  wx:if="{{item.img}}" src='{{item.img}}' />
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,86 @@
+<!--pages/search/search.wxml-->
+<view class='search'>
+  <view class='top1'>
+    <view class='left'>
+      <text bindtap='open'>{{city}}</text>
+      <image src='/image/some/xia.png'/>
+      <input placeholder='搜索' focus='{{true}}' bindinput='handelInput' />
+    </view>
+    <view class='right'>
+      <button size="mini" 
+        confirm-type="search" 
+        bindtap='search'
+        hover-class='hover-btn'
+         >搜索</button>
+    </view>
+  </view>
+  <view wx:if="{{ searchList.length === 0 }}" class='hot-search'>
+    <view class='hot-top'>
+      <text>热门搜索</text>
+      <text class='huan' >换一批</text>
+    </view>
+    <view class='box'>
+      <view wx:for="{{hotsearch}}" wx:key="{{index}}" >{{item}}</view>
+    </view>
+  </view>
+  <view wx:if="{{ searchList.length === 0 }}" class='history'>
+    <view class='history-top'>
+      <text>历史记录</text>
+      <image bindtap='handDelete' src='/image/some/judelete.png' />
+    </view>
+    <view class='box'>
+      <view wx:for="{{lishi}}" wx:key="{{index}}" >{{item}}</view>
+    </view>
+  </view>
+  <view class='art_list'>
+    <view 
+    wx:for="{{searchList}}"
+    wx:key="{{index}}"
+  >
+      <view class='art-box {{ animatelist[index] }}'>
+        <view class='top' bindtap='touser' data-userid="{{index}}" >
+          <image data-userid="{{index}}" src='{{item.user.image}}'/>
+          <text data-userid="{{index}}" >{{item.user.name || "小程...." }}</text>
+        </view>
+        <view class='mid'>
+          <view class='left'>
+            <view class='title' data-index="{{item.id}}" catchtap="toArticle" >{{item.title}}</view>
+            <view>
+              <text class='content'>{{item.brief}}</text>
+            </view>
+          <view class='bottom'>
+            <view class='comment'>
+              <image src='/image/some/m2.png' />
+              <text>34</text>
+            </view>
+            <view class='like'>
+              <image src='/image/some/like2.png' />
+              <text>56</text>
+            </view>
+          </view>
+          </view>
+          <view class='right' wx:if="{{true}}" >
+            <image src='{{ someimg[index] || "http://119.23.54.128:8000/media/users/2019/03/headImg_xU7Kfjo.png"}}' />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{condition}}" class="citypicker">
+  <view class="cityheader">
+    <view bindtap="cancel" hover-class="hovera" class="city-cancel">取消</view>
+    <view bindtap="open" hover-class="hovera" class="city-true">确定</view>
+  </view>
+  <picker-view indicator-style="height: 40px;" style="width: 100%; height: 280px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <picker-view-column class="one">
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 40px;padding-left:15px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column class="one">
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 40px;padding-left:15px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<view class='addmore' wx:if="{{searchList.length > 0 }}" >{{tishi[tishiIndex]}}</view>

@@ -1,0 +1,91 @@
+<!--pages/article/article.wxml-->
+
+<import src="../wxParse/wxParse.wxml" />
+
+<view class='article'>
+  <view class='title'>
+    <text class='h1'>{{_article.title}}</text>
+    <view class='auth'>
+      <image src='{{ _article.user.image|| "http://www.curtaintan.club/headImg/1543287803750.png" }}' />
+      <text>{{_article.user.name || "小程..." }}</text>
+    </view>
+    <view class='about'>
+      <text>{{_article.add_time}}</text>
+      <text>{{_article.click_nums}}</text>
+    </view>
+    <view class='more'>
+      <text>文/用户</text>
+      <text>转载/*****</text>
+    </view>
+  </view>
+  <view class='content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  <view class='like'>
+    <view class='num' bindtap='dianzan' >
+      <image src="{{ liked[1] }}" />
+      <text>132</text>
+    </view>
+    <view class='zan'>支持赞赏</view>
+  </view>
+  <view class='foo' >著作权归知程所有</view>
+  <view class='ping'>
+    <input placeholder='我想说.....' value='{{pingValue}}' bindinput='handInput' />
+    <button hover-class='hove' bindtap='pingSend' >发送</button>
+  </view>
+  <view class='ping-box'>
+    <view class='ping-box-header'>
+      {{pinglunCount}}条评论
+    </view>
+    <view class='p-content'>
+      <view class='ping-one' wx:for="{{pingList}}" wx:key="{{index}}">
+        <view class='p-left'>
+          <image src='{{ item.commenter.image || "http://www.curtaintan.club/headImg/1543287803750.png"}}' />
+        </view>
+        <view class='p-right'>
+          <text>{{item.commenter.name || "小程..." }}</text>
+          <view>{{item.comment_content}}</view>
+          <text class='date'>{{item.add_time}}</text>
+          <view class='ping-jia'
+            wx:if="{{ item.about }}" 
+            wx:for="{{ item.about }}" 
+            wx:for-index="i" 
+            wx:key="i" 
+            wx:for-item="ab" >
+            <view>
+              <text>用户名::</text>
+              <text>{{ab.name}}</text>
+            </view>
+            <text class='date'>2019-01-10 18:14</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='p-footer' bindtap='showMore'>
+      <view>更多评论</view>
+      <image src='/image/some/xia.png' />
+    </view>
+  </view>
+  <view class='more'>
+    <view class='more-header'>
+      更多推荐
+    </view>
+    <view class='tui-item' wx:for="{{tuiList}}" wx:key="index" >
+      <view class="tui-title">标题名称</view>
+      <view class="tui-footer">
+        <view class='item-head'>
+          <image src='http://www.curtaintan.club/headImg/1543287803750.png'/>
+          <text>用户名</text>
+        </view>
+        <view class='item-about' >
+          <image src='/image/some/like3.png'/>
+          <text>23</text>
+          <image src='/image/some/browse2.png'/>
+          <text>23</text>
+          <image src='/image/some/message2.png'/>
+          <text>23</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,162 @@
+/* pages/article/article.wxss */
+@import "../wxParse/wxParse.wxss";
+
+.article{
+  font-size: 14px;
+  padding: 0px 8px;
+}
+.article .title .h1{
+  font-size: 20px;
+}
+.article .title .auth{
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+.article .title .auth image{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+.article .title .about{
+  font-size: 12px;
+  margin: 6px 0px;
+}
+.article .title .about text{
+  margin-right: 10px;
+  color: rgb(110, 110, 110);
+}
+.article .title .more text{
+  margin-right: 10px;
+  color: rgb(105, 105, 105);
+}
+.article .like{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+.article .like view{
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.article .like .num image{
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+}
+.article .like .zan{
+  width: 20%;
+  font-size: 12px;
+  background-color: rgb(255, 82, 51);
+  text-align: center;
+  color: #fff;
+  justify-content: center;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 12px;
+}
+.article .foo{
+  text-align: right;
+  margin: 20px 0px;
+  color: #999;
+  font-size: 11px;
+}
+.article .ping{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.article .ping input{
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 0px 4px;
+  height: 30px;
+  width: 60%;
+}
+.article .ping button{
+  font-size: 14px;
+  width: 20%;
+  background-color: rgb(41, 155, 31);
+  margin: 0px 6px;
+  color: #fff;
+}
+.article .ping .hove{
+  background-color: rgb(167, 167, 167);
+}
+
+.article .ping-box{
+  border-radius: 4px;
+  padding: 10px 15px;
+  background-color: rgb(209, 209, 209);
+}
+.article .ping-box .ping-box-header{
+  font-size: 12px;
+}
+.article .p-content .ping-one{
+  display: flex;
+  margin: 20px 0px;
+}
+.article .p-content .ping-one .p-left image{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+.article .p-content .ping-one .p-right{
+  flex: 1;
+}
+.article .p-content .ping-one .date{
+  font-size: 10px;
+  color: rgb(172, 172, 172);
+}
+.article .p-content .ping-one .ping-jia{
+  padding: 6px 0px;
+  width: 100%;
+  border-top: 1px solid rgb(187, 187, 187);
+}
+.article .ping-box .p-footer{
+  text-align: center;
+}
+.article .ping-box .p-footer image{
+  width: 30px;
+  height: 30px;
+  margin-top: -4px;
+}
+.article .more .more-header{
+  padding: 8px 20px;
+}
+.article .more .tui-item{
+  padding: 52px 0px 8px 20px;
+  color: #fff;
+  background-color: rgb(250, 84, 84);
+  margin-bottom: 8px;
+}
+.article .more .tui-item .tui-footer{
+  display: flex;
+  margin-top: 6px;
+}
+.article .more .tui-item .tui-footer .item-head{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.article .more .tui-item .tui-footer .item-head image{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-right: 6px;
+}
+.article .more .tui-item .tui-footer .item-about{
+  display: flex;
+  align-items: center;
+}
+.article .more .tui-item .tui-footer .item-about image{
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  margin-left: 8px;
+}

@@ -1,0 +1,41 @@
+/* pages/login/login.wxss */
+.login{
+  width: 80%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+.login .form view{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.login .form{
+  border: 1px solid #999;
+  border-radius: 6px;
+  margin: 50px 0px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.login .form .user{
+  border-bottom: 1px solid #999;
+}
+.login .form image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 8px;
+}
+.login .btn{
+  background-color: rgb(250, 92, 29);
+  color: #fff;
+}
+.forget{
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  left: 50%;
+  bottom: 30px;
+  margin: auto;
+  margin-left: -50px;
+  text-align: center;
+  color: rgb(118, 155, 255);
+}
